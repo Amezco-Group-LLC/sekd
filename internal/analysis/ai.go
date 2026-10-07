@@ -11,7 +11,7 @@ import (
 	"strings"
 	"time"
 
-	"github.com/jefrnc/sekd/internal/edgar"
+	"github.com/Amezco-Group-LLC/sekd/internal/edgar"
 )
 
 type AIProvider string
@@ -22,14 +22,14 @@ const (
 )
 
 type AIAnalysis struct {
-	Provider    string `json:"provider"`
-	Model       string `json:"model"`
-	Summary     string `json:"summary"`
-	OfferingAmt string `json:"offering_amount,omitempty"`
-	Warrants    string `json:"warrants,omitempty"`
-	DilutionImpact string `json:"dilution_impact,omitempty"`
-	RedFlags    []string `json:"red_flags,omitempty"`
-	KeyTerms    []string `json:"key_terms,omitempty"`
+	Provider       string   `json:"provider"`
+	Model          string   `json:"model"`
+	Summary        string   `json:"summary"`
+	OfferingAmt    string   `json:"offering_amount,omitempty"`
+	Warrants       string   `json:"warrants,omitempty"`
+	DilutionImpact string   `json:"dilution_impact,omitempty"`
+	RedFlags       []string `json:"red_flags,omitempty"`
+	KeyTerms       []string `json:"key_terms,omitempty"`
 }
 
 func DetectProvider() (AIProvider, string) {

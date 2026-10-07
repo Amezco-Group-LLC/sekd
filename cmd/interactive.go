@@ -3,8 +3,8 @@ package cmd
 import (
 	"fmt"
 
+	"github.com/Amezco-Group-LLC/sekd/internal/tui"
 	tea "github.com/charmbracelet/bubbletea"
-	"github.com/jefrnc/sekd/internal/tui"
 	"github.com/spf13/cobra"
 )
 

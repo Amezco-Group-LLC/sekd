@@ -2,9 +2,11 @@
 
 **SEC Decoded** — CLI tool for stock due diligence, filing analysis, and dilution risk detection using public SEC EDGAR data.
 
-[![CI](https://github.com/jefrnc/sekd/actions/workflows/ci.yml/badge.svg)](https://github.com/jefrnc/sekd/actions/workflows/ci.yml)
-[![Release](https://github.com/jefrnc/sekd/actions/workflows/release.yml/badge.svg)](https://github.com/jefrnc/sekd/releases)
-[![Go](https://img.shields.io/github/go-mod/go-version/jefrnc/sekd)](https://go.dev/)
+Built and maintained by [Amezco Group LLC](https://amezco.app). Looking for continuous dilution alerts across every small cap? See [Amezco Filings](https://amezco.app/#products).
+
+[![CI](https://github.com/Amezco-Group-LLC/sekd/actions/workflows/ci.yml/badge.svg)](https://github.com/Amezco-Group-LLC/sekd/actions/workflows/ci.yml)
+[![Release](https://github.com/Amezco-Group-LLC/sekd/actions/workflows/release.yml/badge.svg)](https://github.com/Amezco-Group-LLC/sekd/releases)
+[![Go](https://img.shields.io/github/go-mod/go-version/Amezco-Group-LLC/sekd)](https://go.dev/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 
 <p align="center">
@@ -31,19 +33,19 @@ Given a US stock ticker, `sekd` generates an automated due diligence report usin
 ### Homebrew (macOS/Linux)
 
 ```bash
-brew tap jefrnc/sekd
+brew tap amezco-group-llc/sekd
 brew install sekd
 ```
 
 ### From source
 
 ```bash
-go install github.com/jefrnc/sekd@latest
+go install github.com/Amezco-Group-LLC/sekd@latest
 ```
 
 ### Binary download
 
-Grab the latest release from [GitHub Releases](https://github.com/jefrnc/sekd/releases).
+Grab the latest release from [GitHub Releases](https://github.com/Amezco-Group-LLC/sekd/releases).
 
 ## Quick start
 

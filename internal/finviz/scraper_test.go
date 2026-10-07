@@ -8,7 +8,7 @@ import (
 	"sync/atomic"
 	"testing"
 
-	"github.com/jefrnc/sekd/internal/cache"
+	"github.com/Amezco-Group-LLC/sekd/internal/cache"
 )
 
 // TestGetQuote_UsesCache verifies that two calls to GetQuote for the same

@@ -4,7 +4,7 @@ import (
 	"sort"
 	"testing"
 
-	"github.com/jefrnc/sekd/internal/analysis"
+	"github.com/Amezco-Group-LLC/sekd/internal/analysis"
 )
 
 func TestDiffFlags_NewAndRemoved(t *testing.T) {

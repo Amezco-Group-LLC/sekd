@@ -16,12 +16,12 @@ type Entry struct {
 
 	// Snapshot fields populated by /watchlist scan. Zero values on entries
 	// that have never been scanned — compare paths must handle that.
-	LastScore     int      `json:"last_score,omitempty"`
-	LastGrade     string   `json:"last_grade,omitempty"`
-	LastFlags     []string `json:"last_flags,omitempty"`
-	LastAccession string   `json:"last_accession,omitempty"`
-	LastFilingDate string  `json:"last_filing_date,omitempty"`
-	LastScannedAt int64    `json:"last_scanned_at,omitempty"`
+	LastScore      int      `json:"last_score,omitempty"`
+	LastGrade      string   `json:"last_grade,omitempty"`
+	LastFlags      []string `json:"last_flags,omitempty"`
+	LastAccession  string   `json:"last_accession,omitempty"`
+	LastFilingDate string   `json:"last_filing_date,omitempty"`
+	LastScannedAt  int64    `json:"last_scanned_at,omitempty"`
 }
 
 // HasSnapshot reports whether this entry has ever been scanned, which

@@ -47,7 +47,7 @@ type CompanyFacts struct {
 }
 
 type FactEntry struct {
-	Label string `json:"label"`
+	Label string                     `json:"label"`
 	Units map[string][]FactDatapoint `json:"units"`
 }
 

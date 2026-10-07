@@ -8,12 +8,12 @@ import (
 	"strconv"
 	"strings"
 
+	"github.com/Amezco-Group-LLC/sekd/internal/analysis"
+	"github.com/Amezco-Group-LLC/sekd/internal/cache"
+	"github.com/Amezco-Group-LLC/sekd/internal/edgar"
+	"github.com/Amezco-Group-LLC/sekd/internal/finviz"
+	"github.com/Amezco-Group-LLC/sekd/internal/report"
 	"github.com/fatih/color"
-	"github.com/jefrnc/sekd/internal/analysis"
-	"github.com/jefrnc/sekd/internal/cache"
-	"github.com/jefrnc/sekd/internal/edgar"
-	"github.com/jefrnc/sekd/internal/finviz"
-	"github.com/jefrnc/sekd/internal/report"
 )
 
 type OutputMode int
@@ -25,12 +25,12 @@ const (
 )
 
 type REPL struct {
-	cache    *cache.Cache
-	edgar    *edgar.Client
-	finviz   *finviz.Scraper
-	mode     OutputMode
-	lastCIK  string
-	lastTicker string
+	cache       *cache.Cache
+	edgar       *edgar.Client
+	finviz      *finviz.Scraper
+	mode        OutputMode
+	lastCIK     string
+	lastTicker  string
 	lastFilings []edgar.Filing
 }
 

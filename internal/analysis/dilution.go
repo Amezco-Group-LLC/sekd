@@ -3,7 +3,7 @@ package analysis
 import (
 	"time"
 
-	"github.com/jefrnc/sekd/internal/edgar"
+	"github.com/Amezco-Group-LLC/sekd/internal/edgar"
 )
 
 func AnalyzeDilution(shares []edgar.SharesDatapoint, authorized float64, atmFilings, shelfFilings []edgar.Filing) DilutionAnalysis {

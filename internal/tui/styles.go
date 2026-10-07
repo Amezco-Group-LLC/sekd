@@ -3,13 +3,13 @@ package tui
 import "github.com/charmbracelet/lipgloss"
 
 var (
-	ColorCyan    = lipgloss.Color("#00BCD4")
-	ColorGreen   = lipgloss.Color("#4CAF50")
-	ColorRed     = lipgloss.Color("#F44336")
-	ColorYellow  = lipgloss.Color("#FFC107")
-	ColorDim     = lipgloss.Color("#888888")
-	ColorWhite   = lipgloss.Color("#FFFFFF")
-	ColorOrange  = lipgloss.Color("#FF9800")
+	ColorCyan   = lipgloss.Color("#00BCD4")
+	ColorGreen  = lipgloss.Color("#4CAF50")
+	ColorRed    = lipgloss.Color("#F44336")
+	ColorYellow = lipgloss.Color("#FFC107")
+	ColorDim    = lipgloss.Color("#888888")
+	ColorWhite  = lipgloss.Color("#FFFFFF")
+	ColorOrange = lipgloss.Color("#FF9800")
 
 	StyleBanner = lipgloss.NewStyle().
 			Foreground(ColorCyan).
@@ -41,10 +41,10 @@ var (
 			Bold(true)
 
 	StyleFilingGreen = lipgloss.NewStyle().
-			Foreground(ColorGreen)
+				Foreground(ColorGreen)
 
 	StyleFilingYellow = lipgloss.NewStyle().
-			Foreground(ColorYellow)
+				Foreground(ColorYellow)
 
 	StyleConfirmBox = lipgloss.NewStyle().
 			BorderStyle(lipgloss.RoundedBorder()).

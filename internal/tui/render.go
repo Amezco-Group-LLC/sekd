@@ -9,15 +9,14 @@ import (
 	"strings"
 	"time"
 
-
+	"github.com/Amezco-Group-LLC/sekd/internal/analysis"
+	"github.com/Amezco-Group-LLC/sekd/internal/config"
 	"github.com/charmbracelet/lipgloss"
-	"github.com/jefrnc/sekd/internal/analysis"
-	"github.com/jefrnc/sekd/internal/config"
 	"regexp"
 
-	"github.com/jefrnc/sekd/internal/edgar"
-	"github.com/jefrnc/sekd/internal/watchlist"
-	"github.com/jefrnc/sekd/internal/history"
+	"github.com/Amezco-Group-LLC/sekd/internal/edgar"
+	"github.com/Amezco-Group-LLC/sekd/internal/history"
+	"github.com/Amezco-Group-LLC/sekd/internal/watchlist"
 )
 
 func renderBanner(version string) string {

@@ -1,4 +1,4 @@
-module github.com/jefrnc/sekd
+module github.com/Amezco-Group-LLC/sekd
 
 go 1.25.6
 

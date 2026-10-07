@@ -3,15 +3,15 @@ package analysis
 type RiskFlag string
 
 const (
-	FlagHighDilution    RiskFlag = "HIGH_DILUTION"
-	FlagRecentATM       RiskFlag = "RECENT_ATM"
-	FlagInsiderSelling  RiskFlag = "INSIDER_SELLING"
-	FlagLowFloat        RiskFlag = "LOW_FLOAT"
-	FlagHighShortInt    RiskFlag = "HIGH_SHORT_INTEREST"
-	FlagShelfReg        RiskFlag = "SHELF_REGISTRATION"
+	FlagHighDilution      RiskFlag = "HIGH_DILUTION"
+	FlagRecentATM         RiskFlag = "RECENT_ATM"
+	FlagInsiderSelling    RiskFlag = "INSIDER_SELLING"
+	FlagLowFloat          RiskFlag = "LOW_FLOAT"
+	FlagHighShortInt      RiskFlag = "HIGH_SHORT_INTEREST"
+	FlagShelfReg          RiskFlag = "SHELF_REGISTRATION"
 	FlagMassiveAuthorized RiskFlag = "MASSIVE_AUTHORIZED_SHARES"
-	FlagWarrantsITM     RiskFlag = "WARRANTS_IN_THE_MONEY"
-	FlagShelfCapacity   RiskFlag = "LARGE_SHELF_REMAINING"
+	FlagWarrantsITM       RiskFlag = "WARRANTS_IN_THE_MONEY"
+	FlagShelfCapacity     RiskFlag = "LARGE_SHELF_REMAINING"
 )
 
 type RiskFlagDetail struct {
@@ -23,14 +23,14 @@ type RiskFlagDetail struct {
 }
 
 type DilutionAnalysis struct {
-	SharesHistory       []SharesEntry
-	DilutionRate6M      float64
-	DilutionRate12M     float64
-	ATMFilings          []FilingSummary
-	ShelfRegistrations  []FilingSummary
-	AuthorizedShares    float64
-	OutstandingShares   float64
-	AuthorizedRatio     float64
+	SharesHistory      []SharesEntry
+	DilutionRate6M     float64
+	DilutionRate12M    float64
+	ATMFilings         []FilingSummary
+	ShelfRegistrations []FilingSummary
+	AuthorizedShares   float64
+	OutstandingShares  float64
+	AuthorizedRatio    float64
 }
 
 type SharesEntry struct {
@@ -45,8 +45,8 @@ type FilingSummary struct {
 }
 
 type InsiderSummary struct {
-	Form4Count   int
-	Period       string
+	Form4Count int
+	Period     string
 }
 
 type DDScore struct {
@@ -56,26 +56,26 @@ type DDScore struct {
 }
 
 type Report struct {
-	Ticker          string
-	CompanyName     string
-	CIK             string
-	Sector          string
-	Industry        string
-	Country         string
-	MarketCap       string
-	Price           string
-	Float           string
-	ShortFloat      string
-	InsiderOwn      string
-	InstOwn         string
-	Volume          string
-	AvgVolume       string
-	RelVolume       string
-	Dilution        DilutionAnalysis
-	Insider         InsiderSummary
-	RiskFlags       []RiskFlagDetail
-	Score           DDScore
-	Deep            *DeepDilution `json:",omitempty"`
+	Ticker      string
+	CompanyName string
+	CIK         string
+	Sector      string
+	Industry    string
+	Country     string
+	MarketCap   string
+	Price       string
+	Float       string
+	ShortFloat  string
+	InsiderOwn  string
+	InstOwn     string
+	Volume      string
+	AvgVolume   string
+	RelVolume   string
+	Dilution    DilutionAnalysis
+	Insider     InsiderSummary
+	RiskFlags   []RiskFlagDetail
+	Score       DDScore
+	Deep        *DeepDilution `json:",omitempty"`
 
 	// LatestAccession is the accession number of the most recent filing of
 	// any form type. Populated by the builder so callers (e.g. watchlist

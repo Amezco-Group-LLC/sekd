@@ -4,7 +4,7 @@ import (
 	"testing"
 	"time"
 
-	"github.com/jefrnc/sekd/internal/edgar"
+	"github.com/Amezco-Group-LLC/sekd/internal/edgar"
 )
 
 func makeShares(dates []string, values []float64) []edgar.SharesDatapoint {

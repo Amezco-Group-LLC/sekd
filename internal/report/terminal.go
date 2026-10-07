@@ -5,9 +5,9 @@ import (
 	"os"
 	"strings"
 
+	"github.com/Amezco-Group-LLC/sekd/internal/analysis"
 	"github.com/fatih/color"
 	"github.com/jedib0t/go-pretty/v6/table"
-	"github.com/jefrnc/sekd/internal/analysis"
 )
 
 func RenderTerminal(r *analysis.Report) {

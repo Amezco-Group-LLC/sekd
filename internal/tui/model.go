@@ -8,21 +8,21 @@ import (
 	"strings"
 	"time"
 
+	"github.com/Amezco-Group-LLC/sekd/internal/analysis"
+	"github.com/Amezco-Group-LLC/sekd/internal/cache"
+	"github.com/Amezco-Group-LLC/sekd/internal/clipboard"
+	"github.com/Amezco-Group-LLC/sekd/internal/config"
+	"github.com/Amezco-Group-LLC/sekd/internal/edgar"
+	"github.com/Amezco-Group-LLC/sekd/internal/history"
+	"github.com/Amezco-Group-LLC/sekd/internal/notify"
+	"github.com/Amezco-Group-LLC/sekd/internal/report"
+	"github.com/Amezco-Group-LLC/sekd/internal/session"
+	"github.com/Amezco-Group-LLC/sekd/internal/watchlist"
 	"github.com/charmbracelet/bubbles/spinner"
 	"github.com/charmbracelet/bubbles/textinput"
 	"github.com/charmbracelet/bubbles/viewport"
 	tea "github.com/charmbracelet/bubbletea"
 	"github.com/charmbracelet/lipgloss"
-	"github.com/jefrnc/sekd/internal/analysis"
-	"github.com/jefrnc/sekd/internal/cache"
-	"github.com/jefrnc/sekd/internal/clipboard"
-	"github.com/jefrnc/sekd/internal/config"
-	"github.com/jefrnc/sekd/internal/edgar"
-	"github.com/jefrnc/sekd/internal/history"
-	"github.com/jefrnc/sekd/internal/notify"
-	"github.com/jefrnc/sekd/internal/report"
-	"github.com/jefrnc/sekd/internal/session"
-	"github.com/jefrnc/sekd/internal/watchlist"
 )
 
 type state int
@@ -38,11 +38,11 @@ const (
 
 // Messages
 type reportDoneMsg struct {
-	report   *analysis.Report
-	output   string
-	cik      string
-	err      error
-	elapsed  time.Duration
+	report  *analysis.Report
+	output  string
+	cik     string
+	err     error
+	elapsed time.Duration
 }
 
 type progressMsg string
@@ -66,18 +66,18 @@ type readDoneMsg struct {
 }
 
 type Model struct {
-	textInput   textinput.Model
-	spinner     spinner.Model
-	state       state
-	version     string
-	output      string
-	statusMsg   string
-	confirmMsg    string
-	confirmYes    tea.Cmd
-	confirmSel    int // 0 = Yes, 1 = No
-	width       int
-	height      int
-	banner      string
+	textInput  textinput.Model
+	spinner    spinner.Model
+	state      state
+	version    string
+	output     string
+	statusMsg  string
+	confirmMsg string
+	confirmYes tea.Cmd
+	confirmSel int // 0 = Yes, 1 = No
+	width      int
+	height     int
+	banner     string
 
 	// Data
 	cache       *cache.Cache
@@ -89,8 +89,8 @@ type Model struct {
 	lastDoc     *edgar.FilingDocument
 	outputMode  string // "terminal", "json", "md"
 	startTime   time.Time
-	filCursor   int    // cursor position in filings list
-	filScroll   int    // scroll offset for filings list
+	filCursor   int // cursor position in filings list
+	filScroll   int // scroll offset for filings list
 	history     *history.History
 	histItems   []string // cached history inputs for up/down nav
 	histIdx     int      // current position in history (-1 = new input)
@@ -937,13 +937,13 @@ type watchlistScanDoneMsg struct {
 
 // scanResult is the per-ticker outcome produced while scanning a watchlist.
 type scanResult struct {
-	ticker      string
-	prev        *watchlist.Entry
-	cur         *analysis.Report
-	err         error
-	hasNew      bool   // new filing since last scan
-	scoreDelta  int    // cur.Score.Score - prev.LastScore
-	newFlags    []string
+	ticker       string
+	prev         *watchlist.Entry
+	cur          *analysis.Report
+	err          error
+	hasNew       bool // new filing since last scan
+	scoreDelta   int  // cur.Score.Score - prev.LastScore
+	newFlags     []string
 	removedFlags []string
 }
 

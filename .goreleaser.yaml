@@ -12,7 +12,7 @@ builds:
     env:
       - CGO_ENABLED=0
     ldflags:
-      - -s -w -X github.com/jefrnc/sekd/cmd.Version={{.Version}}
+      - -s -w -X github.com/Amezco-Group-LLC/sekd/cmd.Version={{.Version}}
     goos:
       - darwin
       - linux
@@ -39,16 +39,16 @@ changelog:
 homebrew_casks:
   - name: sekd
     repository:
-      owner: jefrnc
+      owner: Amezco-Group-LLC
       name: homebrew-sekd
       token: "{{ .Env.HOMEBREW_TAP_TOKEN }}"
-    homepage: "https://github.com/jefrnc/sekd"
+    homepage: "https://github.com/Amezco-Group-LLC/sekd"
     description: "Day-trading due diligence in your terminal — SEC filings, dilution risk, and AI extraction"
-    # The downloaded archive is hosted on github.com/jefrnc, so tell brew
+    # The downloaded archive is hosted on github.com/Amezco-Group-LLC, so tell brew
     # to treat that as the verified source domain (keeps `brew audit` happy
     # even if the homepage host ever differs from the download host).
     url:
-      verified: github.com/jefrnc/sekd
+      verified: github.com/Amezco-Group-LLC/sekd
     # sekd is an unsigned, un-notarized macOS binary. Without this hook,
     # Gatekeeper quarantines it on install and running `sekd` tries to
     # launch "an app downloaded from the internet". Stripping the

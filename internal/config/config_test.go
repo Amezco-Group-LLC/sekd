@@ -98,8 +98,8 @@ func TestSetUnknownKey(t *testing.T) {
 
 func TestSetAlternateKeyNames(t *testing.T) {
 	tests := []struct {
-		key    string
-		field  string
+		key   string
+		field string
 	}{
 		{"openai-key", "openai"},
 		{"openai_key", "openai"},
