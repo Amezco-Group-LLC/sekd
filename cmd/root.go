@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"os"
 
-	"github.com/jefrnc/sekd/internal/config"
+	"github.com/Amezco-Group-LLC/sekd/internal/config"
 	"github.com/joho/godotenv"
 	"github.com/spf13/cobra"
 )

@@ -103,8 +103,8 @@ func TestMergeDeep_Empty(t *testing.T) {
 func TestMarkInTheMoney(t *testing.T) {
 	d := &DeepDilution{
 		Warrants: []Warrant{
-			{Strike: 2.0, Shares: 1_000_000}, // ITM
-			{Strike: 5.0, Shares: 500_000},   // ITM (at price)
+			{Strike: 2.0, Shares: 1_000_000},  // ITM
+			{Strike: 5.0, Shares: 500_000},    // ITM (at price)
 			{Strike: 10.0, Shares: 2_000_000}, // OTM
 		},
 		Convertibles: []Convertible{

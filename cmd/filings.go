@@ -7,22 +7,22 @@ import (
 	"os"
 	"strings"
 
+	"github.com/Amezco-Group-LLC/sekd/internal/analysis"
+	"github.com/Amezco-Group-LLC/sekd/internal/cache"
+	"github.com/Amezco-Group-LLC/sekd/internal/edgar"
 	"github.com/fatih/color"
 	"github.com/jedib0t/go-pretty/v6/table"
-	"github.com/jefrnc/sekd/internal/analysis"
-	"github.com/jefrnc/sekd/internal/cache"
-	"github.com/jefrnc/sekd/internal/edgar"
 	"github.com/spf13/cobra"
 )
 
 var (
-	formType        string
-	analyze         bool
-	listOnly        bool
-	filingIdx       int
-	maxChars        int
-	filingsJSON     bool
-	filingsMD       bool
+	formType    string
+	analyze     bool
+	listOnly    bool
+	filingIdx   int
+	maxChars    int
+	filingsJSON bool
+	filingsMD   bool
 )
 
 var filingsCmd = &cobra.Command{
@@ -251,13 +251,13 @@ func renderAnalysisTerminal(doc *edgar.FilingDocument, result *analysis.AIAnalys
 
 func renderAnalysisJSON(doc *edgar.FilingDocument, result *analysis.AIAnalysis) error {
 	output := map[string]interface{}{
-		"ticker":       doc.Ticker,
-		"company":      doc.CompanyName,
-		"cik":          doc.CIK,
-		"form":         doc.Form,
-		"filing_date":  doc.FilingDate,
-		"url":          doc.URL,
-		"analysis":     result,
+		"ticker":      doc.Ticker,
+		"company":     doc.CompanyName,
+		"cik":         doc.CIK,
+		"form":        doc.Form,
+		"filing_date": doc.FilingDate,
+		"url":         doc.URL,
+		"analysis":    result,
 	}
 	data, err := json.MarshalIndent(output, "", "  ")
 	if err != nil {
@@ -313,19 +313,19 @@ func renderAnalysisMD(doc *edgar.FilingDocument, result *analysis.AIAnalysis) {
 
 func renderFilingsListJSON(ticker, company, cik string, filings []edgar.Filing) error {
 	type entry struct {
-		Index   int    `json:"index"`
-		Date    string `json:"date"`
-		Form    string `json:"form"`
-		Document string `json:"document"`
+		Index     int    `json:"index"`
+		Date      string `json:"date"`
+		Form      string `json:"form"`
+		Document  string `json:"document"`
 		Accession string `json:"accession"`
 	}
 	var entries []entry
 	for i, f := range filings {
 		entries = append(entries, entry{
-			Index:    i,
-			Date:     f.FilingDate.Format("2006-01-02"),
-			Form:     f.Form,
-			Document: f.PrimaryDocument,
+			Index:     i,
+			Date:      f.FilingDate.Format("2006-01-02"),
+			Form:      f.Form,
+			Document:  f.PrimaryDocument,
 			Accession: f.AccessionNumber,
 		})
 	}

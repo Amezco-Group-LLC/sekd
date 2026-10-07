@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"strings"
 
-	"github.com/jefrnc/sekd/internal/analysis"
+	"github.com/Amezco-Group-LLC/sekd/internal/analysis"
 )
 
 func RenderMarkdown(r *analysis.Report) {

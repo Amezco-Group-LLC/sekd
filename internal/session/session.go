@@ -8,13 +8,13 @@ import (
 )
 
 type Session struct {
-	ID           string `json:"id"`
-	LastTicker   string `json:"last_ticker,omitempty"`
-	LastCIK      string `json:"last_cik,omitempty"`
-	LastOutput   string `json:"last_output,omitempty"`
-	OutputMode   string `json:"output_mode,omitempty"`
-	LastScore    *Score `json:"last_score,omitempty"`
-	UpdatedAt    int64  `json:"updated_at"`
+	ID         string `json:"id"`
+	LastTicker string `json:"last_ticker,omitempty"`
+	LastCIK    string `json:"last_cik,omitempty"`
+	LastOutput string `json:"last_output,omitempty"`
+	OutputMode string `json:"output_mode,omitempty"`
+	LastScore  *Score `json:"last_score,omitempty"`
+	UpdatedAt  int64  `json:"updated_at"`
 }
 
 type Score struct {

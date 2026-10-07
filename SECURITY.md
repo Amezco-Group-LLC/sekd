@@ -14,7 +14,7 @@ If you believe you've found a security vulnerability in sekd — for example, a 
 
 Instead:
 
-1. Open a [private security advisory](https://github.com/jefrnc/sekd/security/advisories/new) on GitHub, or
+1. Open a [private security advisory](https://github.com/Amezco-Group-LLC/sekd/security/advisories/new) on GitHub, or
 2. Email the maintainer directly (see the commit history for the address).
 
 Please include:

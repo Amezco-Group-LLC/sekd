@@ -9,8 +9,8 @@ import (
 	"strings"
 	"time"
 
+	"github.com/Amezco-Group-LLC/sekd/internal/cache"
 	"github.com/PuerkitoBio/goquery"
-	"github.com/jefrnc/sekd/internal/cache"
 )
 
 // quoteCacheTTL controls how long a Finviz quote response is considered

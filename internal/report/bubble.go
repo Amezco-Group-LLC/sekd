@@ -4,8 +4,8 @@ import (
 	"fmt"
 	"strings"
 
+	"github.com/Amezco-Group-LLC/sekd/internal/analysis"
 	"github.com/charmbracelet/lipgloss"
-	"github.com/jefrnc/sekd/internal/analysis"
 )
 
 var (

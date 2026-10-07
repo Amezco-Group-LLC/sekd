@@ -7,7 +7,7 @@ import (
 	"net/http"
 	"time"
 
-	"github.com/jefrnc/sekd/internal/cache"
+	"github.com/Amezco-Group-LLC/sekd/internal/cache"
 	"golang.org/x/time/rate"
 )
 

@@ -4,7 +4,7 @@ import (
 	"encoding/json"
 	"fmt"
 
-	"github.com/jefrnc/sekd/internal/analysis"
+	"github.com/Amezco-Group-LLC/sekd/internal/analysis"
 )
 
 func RenderJSON(r *analysis.Report) error {

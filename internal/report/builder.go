@@ -7,10 +7,10 @@ import (
 	"sort"
 	"time"
 
-	"github.com/jefrnc/sekd/internal/analysis"
-	"github.com/jefrnc/sekd/internal/cache"
-	"github.com/jefrnc/sekd/internal/edgar"
-	"github.com/jefrnc/sekd/internal/finviz"
+	"github.com/Amezco-Group-LLC/sekd/internal/analysis"
+	"github.com/Amezco-Group-LLC/sekd/internal/cache"
+	"github.com/Amezco-Group-LLC/sekd/internal/edgar"
+	"github.com/Amezco-Group-LLC/sekd/internal/finviz"
 	"golang.org/x/sync/errgroup"
 )
 
@@ -47,10 +47,10 @@ func (b *Builder) BuildWithOptions(ctx context.Context, ticker string, opts Buil
 	}
 
 	var (
-		subs      *edgar.Submissions
-		shares    []edgar.SharesDatapoint
+		subs       *edgar.Submissions
+		shares     []edgar.SharesDatapoint
 		authorized float64
-		quote     *finviz.Quote
+		quote      *finviz.Quote
 	)
 
 	g, gctx := errgroup.WithContext(ctx)
@@ -134,20 +134,20 @@ func (b *Builder) BuildWithOptions(ctx context.Context, ticker string, opts Buil
 	return &analysis.Report{
 		Ticker:      ticker,
 		CompanyName: companyName,
-		CIK:        cik,
-		Sector:     quote.Sector,
-		Industry:   quote.Industry,
-		Country:    quote.Country,
-		MarketCap:  quote.MarketCap,
-		Price:      quote.Price,
-		Float:      quote.Float,
-		ShortFloat: quote.ShortFloat,
-		InsiderOwn: quote.InsiderOwn,
-		InstOwn:    quote.InstOwn,
-		Volume:     quote.Volume,
-		AvgVolume:  quote.AvgVolume,
-		RelVolume:  quote.RelVolume,
-		Dilution:   dilution,
+		CIK:         cik,
+		Sector:      quote.Sector,
+		Industry:    quote.Industry,
+		Country:     quote.Country,
+		MarketCap:   quote.MarketCap,
+		Price:       quote.Price,
+		Float:       quote.Float,
+		ShortFloat:  quote.ShortFloat,
+		InsiderOwn:  quote.InsiderOwn,
+		InstOwn:     quote.InstOwn,
+		Volume:      quote.Volume,
+		AvgVolume:   quote.AvgVolume,
+		RelVolume:   quote.RelVolume,
+		Dilution:    dilution,
 		Insider: analysis.InsiderSummary{
 			Form4Count: form4Count,
 			Period:     "6 months",

@@ -36,7 +36,7 @@ This Code of Conduct applies within all community spaces — the sekd repository
 
 ## Enforcement
 
-Instances of abusive, harassing, or otherwise unacceptable behavior may be reported to the project maintainer by opening a [private security advisory](https://github.com/jefrnc/sekd/security/advisories/new) or contacting the maintainer directly through the email associated with recent commits.
+Instances of abusive, harassing, or otherwise unacceptable behavior may be reported to the project maintainer by opening a [private security advisory](https://github.com/Amezco-Group-LLC/sekd/security/advisories/new) or contacting the maintainer directly through the email associated with recent commits.
 
 All complaints will be reviewed and investigated promptly and fairly. All project maintainers are obligated to respect the privacy and security of the reporter of any incident.
 

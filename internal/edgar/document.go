@@ -39,7 +39,7 @@ func (c *Client) GetFilingDocument(ctx context.Context, cik string, filing Filin
 	return &FilingDocument{
 		CIK:             cik,
 		Form:            filing.Form,
-		FilingDate:       filing.FilingDate.Format("2006-01-02"),
+		FilingDate:      filing.FilingDate.Format("2006-01-02"),
 		AccessionNumber: filing.AccessionNumber,
 		URL:             url,
 		RawHTML:         string(data),

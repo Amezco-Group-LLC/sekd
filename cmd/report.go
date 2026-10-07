@@ -6,8 +6,8 @@ import (
 	"os"
 	"strings"
 
-	"github.com/jefrnc/sekd/internal/cache"
-	"github.com/jefrnc/sekd/internal/report"
+	"github.com/Amezco-Group-LLC/sekd/internal/cache"
+	"github.com/Amezco-Group-LLC/sekd/internal/report"
 	"github.com/spf13/cobra"
 )
 

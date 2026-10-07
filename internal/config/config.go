@@ -9,9 +9,9 @@ import (
 )
 
 type Config struct {
-	OpenAIKey     string `json:"openai_key,omitempty"`
-	OpenAIModel   string `json:"openai_model,omitempty"`
-	AnthropicKey  string `json:"anthropic_key,omitempty"`
+	OpenAIKey      string `json:"openai_key,omitempty"`
+	OpenAIModel    string `json:"openai_model,omitempty"`
+	AnthropicKey   string `json:"anthropic_key,omitempty"`
 	AnthropicModel string `json:"anthropic_model,omitempty"`
 }
 

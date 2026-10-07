@@ -5,7 +5,7 @@ import (
 	"strings"
 	"time"
 
-	"github.com/jefrnc/sekd/internal/edgar"
+	"github.com/Amezco-Group-LLC/sekd/internal/edgar"
 )
 
 func EvaluateRiskFlags(da DilutionAnalysis, insiderCount int, quote QuoteData) []RiskFlagDetail {
